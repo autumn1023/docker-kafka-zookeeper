@@ -26,7 +26,7 @@ ENV KAFKA_DOWNLOAD_URL https://archive.apache.org/dist/kafka/"$KAFKA_VERSION"/ka
 
 RUN wget -q $KAFKA_DOWNLOAD_URL -O /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz
 RUN tar xfz /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -C /opt && rm /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz
-ADD assets/conf/server.properties  assets/conf/zookeeper.properties  $KAFKA_HOME/config
+ADD assets/conf/server.properties  assets/conf/zookeeper.properties  $KAFKA_HOME/config/
 
 
 ADD assets/scripts/start-kafka.sh /usr/bin/start-kafka.sh
