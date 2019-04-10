@@ -13,7 +13,7 @@ RUN apt-get update && \
 ENV ZOOKEEPER_VERSION 3.4.13
 ENV ZOOKEEPER_HOME /opt/zookeeper-"$ZOOKEEPER_VERSION"
 
-RUN wget https://www-us.apache.org/dist/zookeeper/zookeeper-"$ZOOKEEPER_VERSION"/zookeeper-"$ZOOKEEPER_VERSION".tar.gz -O /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz
+RUN wget https://www-eu.apache.org/dist/zookeeper/zookeeper-"$ZOOKEEPER_VERSION"/zookeeper-"$ZOOKEEPER_VERSION".tar.gz -O /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz
 
 RUN ls -l /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz
 RUN tar xfz /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz -C /opt && rm /tmp/zookeeper-"$ZOOKEEPER_VERSION".tgz
