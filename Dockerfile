@@ -5,7 +5,7 @@ FROM openjdk:8-jre
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get install -y wget supervisor && \
+    apt-get install -y wget supervisor procps vim net-tools &&  \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
 
